@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3CABED2C-12F1-4408-AAAE-E2185A426F35}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>VisTool</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;NOMINMAX;_CONSOLE;_DEBUG;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)DXUT11/Core;$(SolutionDir)DXUT11/Optional;$(SolutionDir)Effects11/inc;$(SolutionDir)../../external/AntTweakBar_116/include</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile />
+      <PrecompiledHeaderOutputFile />
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>D3DCompiler.lib;comctl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;AntTweakBar64.lib;Shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)../../external/AntTweakBar_116/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <FxCompile>
+      <ShaderType>Effect</ShaderType>
+    </FxCompile>
+    <FxCompile>
+      <ShaderModel>5.0</ShaderModel>
+    </FxCompile>
+    <FxCompile>
+      <ObjectFileOutput>$(OutDir)%(Filename).fxo</ObjectFileOutput>
+      <EntryPointName />
+    </FxCompile>
+    <CustomBuildStep>
+      <Command>
+      </Command>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Message>
+      </Message>
+    </CustomBuildStep>
+    <PostBuildEvent>
+      <Command>echo 'Copying AntTweakBar dll to output Folder'
+copy "$(SolutionDir)..\..\external\AntTweakBar_116\lib\AntTweakBar64.dll" "$(OutDir)AntTweakBar64.dll" /Y</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NOMINMAX;_CONSOLE;NDEBUG;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)DXUT11/Core;$(SolutionDir)DXUT11/Optional;$(SolutionDir)Effects11/inc;$(SolutionDir)../../external/AntTweakBar_116/include</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile />
+      <PrecompiledHeaderOutputFile />
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>D3DCompiler.lib;comctl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;AntTweakBar64.lib;Shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)../../external/AntTweakBar_116/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <FxCompile>
+      <ShaderType>Effect</ShaderType>
+    </FxCompile>
+    <FxCompile>
+      <ShaderModel>5.0</ShaderModel>
+    </FxCompile>
+    <FxCompile>
+      <ObjectFileOutput>$(OutDir)%(Filename).fxo</ObjectFileOutput>
+      <EntryPointName />
+    </FxCompile>
+    <PostBuildEvent>
+      <Command>echo 'Copying AntTweakBar dll to output Folder'
+copy "$(SolutionDir)..\..\external\AntTweakBar_116\lib\AntTweakBar64.dll" "$(OutDir)AntTweakBar64.dll" /Y</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\external\rply-1.1.3\rply.c" />
+    <ClCompile Include="BoxManipulationManager.cpp" />
+    <ClCompile Include="GlyphVisualizer.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="ParticleTracer.cpp" />
+    <ClCompile Include="PLYMesh.cpp" />
+    <ClCompile Include="RayCaster.cpp" />
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="SimpleMesh.cpp" />
+    <ClCompile Include="SliceVisualizer.cpp" />
+    <ClCompile Include="TransferFunctionEditor\TransferFunctionEditor.cpp" />
+    <ClCompile Include="TransferFunctionEditor\TransferFunctionLine.cpp" />
+    <ClCompile Include="TransparencyModule.cpp" />
+    <ClCompile Include="util\Gui2DHelper.cpp" />
+    <ClCompile Include="util\Stereo.cpp" />
+    <ClCompile Include="util\util.cpp" />
+    <ClCompile Include="ScalarVolumeData.cpp" />
+    <ClCompile Include="VectorVolumeData.cpp" />
+    <ClCompile Include="VolumeData.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\external\rply-1.1.3\rply.h" />
+    <ClInclude Include="BoxManipulationManager.h" />
+    <ClInclude Include="Globals.h" />
+    <ClInclude Include="GlyphVisualizer.h" />
+    <ClInclude Include="ParticleTracer.h" />
+    <ClInclude Include="PLYMesh.h" />
+    <ClInclude Include="RayCaster.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="SettingsStorage.h" />
+    <ClInclude Include="SimpleMesh.h" />
+    <ClInclude Include="SliceVisualizer.h" />
+    <ClInclude Include="TransferFunctionEditor\TransferFunctionEditor.h" />
+    <ClInclude Include="TransferFunctionEditor\TransferFunctionLine.h" />
+    <ClInclude Include="TransparencyModule.h" />
+    <ClInclude Include="Triangle.h" />
+    <ClInclude Include="util\Gui2DHelper.h" />
+    <ClInclude Include="util\notification.h" />
+    <ClInclude Include="util\Stereo.h" />
+    <ClInclude Include="util\util.h" />
+    <ClInclude Include="ScalarVolumeData.h" />
+    <ClInclude Include="VectorVolumeData.h" />
+    <ClInclude Include="VolumeData.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DXUT11\Core\DXUT_2012.vcxproj">
+      <Project>{85344b7f-5aa0-4e12-a065-d1333d11f6ca}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\DXUT11\Optional\DXUTOpt_2012.vcxproj">
+      <Project>{61b333c2-c4f7-4cc1-a9bf-83f6d95588eb}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Effects11\Effects11_2012.vcxproj">
+      <Project>{df460eab-570d-4b50-9089-2e2fc801bf38}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="common.hlsli" />
+    <FxCompile Include="GlyphVisualizer.fx" />
+    <FxCompile Include="ParticleTracer.fx" />
+    <FxCompile Include="RayCaster.fx" />
+    <FxCompile Include="ScalarVolumeData.fx" />
+    <FxCompile Include="SimpleMesh.fx" />
+    <FxCompile Include="SliceVisualizer.fx" />
+    <FxCompile Include="TransferFunctionEditor\TransferFunctionEditor.fx" />
+    <FxCompile Include="TransparencyModule.fx" />
+    <FxCompile Include="VectorVolumeData.fx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GeometricPixelShaders.hlsli" />
+    <None Include="TransparencyModuleInterface.hlsli" />
+    <FxCompile Include="util\Gui2DHelper.fx">
+      <FileType>Document</FileType>
+    </FxCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

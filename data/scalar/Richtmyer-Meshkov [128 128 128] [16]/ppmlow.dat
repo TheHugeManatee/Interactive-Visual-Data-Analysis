@@ -1,0 +1,5 @@
+ObjectFileName: ppmlow_t%03iz.raw
+ObjectIndices:  0 60 4
+Resolution:     128 128 128
+Format:         BYTE
+SliceThickness: 1 1 1

@@ -1,0 +1,6 @@
+ObjectFileName:    DrainZ_%02i.raw
+ObjectIndices:     0 15 1
+Resolution:        128 64 64
+Format:            half3
+SliceThickness:    0.05 0.05 0.05
+Timestep:          1.0

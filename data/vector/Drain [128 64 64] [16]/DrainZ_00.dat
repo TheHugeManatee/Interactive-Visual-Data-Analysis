@@ -1,0 +1,4 @@
+ObjectFileName:    DrainZ_00.raw
+Resolution:        128 64 64
+Format:            half3
+SliceThickness:    0.05 0.05 0.05

@@ -1,0 +1,7 @@
+ObjectFileName:    vortexStreet%04i.raw
+ObjectIndices:     0 5000 25
+Resolution:        61 21 21
+Format:            float3
+SliceThickness:    0.05 0.05 0.05
+Timestep:          0.125
+MeshFileName:      obstacle.ply

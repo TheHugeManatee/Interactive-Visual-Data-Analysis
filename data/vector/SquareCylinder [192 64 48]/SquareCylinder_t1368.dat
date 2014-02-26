@@ -1,0 +1,5 @@
+ObjectFileName:    SquareCylinder_t1368.raw
+Resolution:        192 64 48
+Format:            float3
+SliceThickness:    0.185 0.185 0.185
+MeshFileName:      SquareCylinder.ply

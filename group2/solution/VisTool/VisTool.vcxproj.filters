@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="util\util.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="SimpleMesh.cpp" />
+    <ClCompile Include="PLYMesh.cpp" />
+    <ClCompile Include="RayCaster.cpp" />
+    <ClCompile Include="TransferFunctionEditor\TransferFunctionEditor.cpp">
+      <Filter>Transfer Function Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="TransferFunctionEditor\TransferFunctionLine.cpp">
+      <Filter>Transfer Function Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\external\rply-1.1.3\rply.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="ScalarVolumeData.cpp" />
+    <ClCompile Include="VolumeData.cpp" />
+    <ClCompile Include="VectorVolumeData.cpp" />
+    <ClCompile Include="ParticleTracer.cpp" />
+    <ClCompile Include="GlyphVisualizer.cpp" />
+    <ClCompile Include="BoxManipulationManager.cpp" />
+    <ClCompile Include="SliceVisualizer.cpp" />
+    <ClCompile Include="TransparencyModule.cpp" />
+    <ClCompile Include="util\Stereo.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="util\Gui2DHelper.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="util">
+      <UniqueIdentifier>{ba535b4e-0c95-4992-8a48-6babc14c1f7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Transfer Function Editor">
+      <UniqueIdentifier>{85867e6e-6808-4da5-815b-7a2deb487496}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="util\util.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="SimpleMesh.h" />
+    <ClInclude Include="PLYMesh.h" />
+    <ClInclude Include="Triangle.h" />
+    <ClInclude Include="RayCaster.h" />
+    <ClInclude Include="Globals.h" />
+    <ClInclude Include="TransferFunctionEditor\TransferFunctionEditor.h">
+      <Filter>Transfer Function Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="TransferFunctionEditor\TransferFunctionLine.h">
+      <Filter>Transfer Function Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\external\rply-1.1.3\rply.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="ScalarVolumeData.h" />
+    <ClInclude Include="VolumeData.h" />
+    <ClInclude Include="VectorVolumeData.h" />
+    <ClInclude Include="SettingsStorage.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleTracer.h" />
+    <ClInclude Include="GlyphVisualizer.h" />
+    <ClInclude Include="BoxManipulationManager.h" />
+    <ClInclude Include="SliceVisualizer.h" />
+    <ClInclude Include="util\notification.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="TransparencyModule.h" />
+    <ClInclude Include="util\Stereo.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\Gui2DHelper.h">
+      <Filter>util</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="SimpleMesh.fx" />
+    <FxCompile Include="RayCaster.fx" />
+    <FxCompile Include="VectorVolumeData.fx" />
+    <FxCompile Include="ScalarVolumeData.fx" />
+    <FxCompile Include="TransferFunctionEditor\TransferFunctionEditor.fx">
+      <Filter>Transfer Function Editor</Filter>
+    </FxCompile>
+    <FxCompile Include="ParticleTracer.fx" />
+    <FxCompile Include="GlyphVisualizer.fx" />
+    <FxCompile Include="SliceVisualizer.fx" />
+    <FxCompile Include="common.hlsli" />
+    <FxCompile Include="TransparencyModule.fx" />
+    <FxCompile Include="util\Gui2DHelper.fx">
+      <Filter>util</Filter>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GeometricPixelShaders.hlsli" />
+    <None Include="TransparencyModuleInterface.hlsli" />
+  </ItemGroup>
+</Project>

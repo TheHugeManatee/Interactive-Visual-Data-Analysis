@@ -1,0 +1,4 @@
+ObjectFileName: vmhead256cubed.raw
+Resolution:     256 256 256
+SliceThickness: 1.054688 1.054688 1.1484375
+Format:         UCHAR
